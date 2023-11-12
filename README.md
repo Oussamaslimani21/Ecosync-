@@ -1,9 +1,9 @@
 # ESP32 API
 + AP IP address: 192.168.4.1
 + Port: 80 (http)
-+ /
++ `/`
 Serves SPIFFS files
-+ /scan
++ `/scan`
 ```json
 {
     "others": [
