@@ -10,8 +10,8 @@ import Navbar from "./lib/Navbar.svelte";
   <Navbar />
   <div>
     <Bar />
-    <div>
-      <div class="w-96 h-92">
+    <div class="w-full min-h-screen p-10 ml-64">
+      <div class="w-[600px] h-[700px]">
         <Chart />
       </div>
     </div>

@@ -29,6 +29,6 @@
 
 <style>
   .container {
-    @apply h-screen w-64 bg-gray-900;
+    @apply h-screen w-64 bg-gray-900 fixed left-0 top-0;
   }
 </style>
