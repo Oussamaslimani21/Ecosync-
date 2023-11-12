@@ -25,6 +25,8 @@ Serves SPIFFS files
     ]
 }
 ```
++ Wifi scan interface
+![wifi](backend/screenshots/wfi.png)
 
 # Esp32 interface
 1. Install dependencies
@@ -48,4 +50,4 @@ cp -r dist/* site-serv/data
 ## RESTful api (Rust using actix framework)
 
 ## SQL DB (Mysql/Mariadb)
-![db](backend/db/db-basic.png)
+![db](backend/screenshots/db-basic.png)
