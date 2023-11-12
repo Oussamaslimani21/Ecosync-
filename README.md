@@ -25,3 +25,22 @@ Serves SPIFFS files
     ]
 }
 ```
+
+# Esp32 interface
+1. Install dependencies
+```bash
+npm i
+# or:
+bun i
+```
+2. Build SPA
+```bash
+npm run build
+# or:
+bun run build
+```
+3. Copy `dist` files
+```bash
+cp -r dist/* site-serv/data
+```
+4. Upload `site-serv/data` to SPIFFS partition
