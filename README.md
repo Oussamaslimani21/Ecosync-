@@ -30,6 +30,7 @@ Serves SPIFFS files
 MIUI like interface
 
 ![wifi](backend/screenshots/wfi.png)
+![wifi](backend/screenshots/wifi-pw.png)
 
 # Esp32 interface
 1. Install dependencies

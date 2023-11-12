@@ -6,13 +6,20 @@
   export let tag;
   export let add = false;
   export let connected = false;
+
+  let tapped = false;
+  let selected;
+  let password = "";
 </script>
 
 <div class="container">
   <div class="line"></div>
   <div class="title">{title}</div>
   {#each networks as network}
-    <div class="network">
+    <div class="network" on:click={() => {
+      tapped = true;
+      selected = network;
+    }}>
       <div class="flex gap-2">
         <div class="flex items-center px-2"><img src={Wifi} alt="" width="20px"></div>
         <div class="flex flex-col name" style="--color: {['#60a5fa', 'black'][Number(!connected)]}">
@@ -35,6 +42,32 @@
     </div>
   {/if}
 </div>
+{#if tapped}
+  <div class="w-screen fixed bottom-0 h-screen bg-black opacity-40 blur-sm"></div>
+  <div 
+    class="w-screen fixed bottom-0 h-[300px] bg-white rounded-t-2xl shadow-xl opacity-100 flex flex-col items-center pt-10 gap-12"
+  >
+    <div class="font-bold">{selected}</div>
+    <input 
+      type="password" 
+      class="border-blue-400 border-2 rounded-lg h-12 w-[80%] bg-gray-200 px-4"
+      bind:value={password}
+    >
+    <div class="grid grid-cols-2 w-[80%]">
+      <div class="m-auto py-4 px-10 rounded-full bg-gray-200">Cancel</div>
+      <div class="m-auto py-4 px-10 rounded-full bg-gray-200">
+        <span 
+          class="connect" 
+          style="
+            --opacity: {['1', '0.5'][Number(password.length <= 4)]};
+            --color: {['#60a5fa', 'black'][Number(password.length <= 4)]};
+            --weight: {['700', '400'][Number(password.length <= 4)]};
+          "
+        >Connect</span>
+      </div>
+    </div>
+  </div>
+{/if}
 
 <style>
   .container {
@@ -55,5 +88,10 @@
   }
   .name {
     color: var(--color, black);
+  }
+  .connect {
+    opacity: var(--opacity, 0.5);
+    color: var(--color, black);
+    font-weight: var(--weight, 400);
   }
 </style>
