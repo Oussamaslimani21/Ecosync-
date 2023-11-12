@@ -28,6 +28,7 @@ Serves SPIFFS files
 + Wifi scan interface
 
 MIUI like interface
+
 ![wifi](backend/screenshots/wfi.png)
 
 # Esp32 interface
