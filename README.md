@@ -25,14 +25,8 @@ Serves SPIFFS files
     ]
 }
 ```
-+ Wifi scan interface
 
-MIUI like interface
-
-![wifi](backend/screenshots/wfi.png)
-![wifi](backend/screenshots/wifi-pw.png)
-
-# Esp32 interface
+# Esp32 web interface
 1. Install dependencies
 ```bash
 npm i
@@ -50,6 +44,13 @@ bun run build
 cp -r dist/* site-serv/data
 ```
 4. Upload `site-serv/data` to SPIFFS partition
+
++ Wifi scan interface
+
+MIUI like interface
+
+![wifi](backend/screenshots/wfi.png)
+![wifi](backend/screenshots/wifi-pw.png)
 # Backend
 ## RESTful api (Rust using actix framework)
 
