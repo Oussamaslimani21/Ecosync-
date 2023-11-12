@@ -9,6 +9,7 @@ edition = "2021"
 actix = "0.13.1"
 actix-cors = "0.6.4"
 actix-web = { version = "4.4.0", features = ["openssl"] }
+lazy_static = "1.4.0"
 mysql = "24.0.0"
 serde = { version = "1.0.192", features = ["derive"] }
 serde_json = "1.0.108"
