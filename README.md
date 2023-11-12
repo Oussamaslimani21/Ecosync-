@@ -44,3 +44,8 @@ bun run build
 cp -r dist/* site-serv/data
 ```
 4. Upload `site-serv/data` to SPIFFS partition
+# Backend
+## RESTful api (Rust using actix framework)
+
+## SQL DB (Mysql/Mariadb)
+![db](backend/db/db-basic.png)
